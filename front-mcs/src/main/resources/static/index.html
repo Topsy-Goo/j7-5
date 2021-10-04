@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Marketplace J7-6</title>
+
+<!-- Эти ссылки подключают библиотеку стилей из https://getbootstrap.com/docs. -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<!-- Урезанная версия ангулара — то что нужно (это его база, но есть и дополнения): -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+	<!-- Дполнение первое: роутер фронта. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
+	<!-- Дополнение второе: поддержка использования локального хранилища браузера. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+</head>
+<body ng-app="market-front">
+<div class="container">
+	<div ng-controller="indexController">
+		<h1>{{appTitle}}</h1>
+		<p>&nbsp;</p>
+	</div>
+	<ng-view>	</ng-view>
+	<p>&nbsp;</p>
+	<script src="index.js"></script>
+	<script src="store/store.js"></script>
+</div>
+</body>
+</html>
