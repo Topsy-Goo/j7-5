@@ -1,0 +1,29 @@
+<div style="margin: 10px;">
+	<h5>Каталог продуктов</h5>
+	<p>&nbsp;</p>
+
+	<table class="table table-striped">
+		<thead class="table-dark">
+			<tr><th>id</th>
+				<th>category</th>
+				<th>title</th>
+				<th>price</th>
+				<th>more actions</th>
+			</tr>
+		</thead>
+		<tr ng-repeat="p in products"><!-- .content -->
+			<td>{{p.productId}}</td>
+			<td>{{p.category}}</td>
+			<th scope="row">{{p.title}}</th>
+			<td>{{p.price}}</td>
+			<td>
+				<button class="btn btn-info" style="font-family: Webdings;"
+					title="Посмотреть информацию о продукте."
+					ng-click="infoProduct(p)">s</button>
+			</td>
+		</tr>
+		<caption>
+			Всего товаров: {{products.length}}
+		</caption>
+	</table>
+</div>
